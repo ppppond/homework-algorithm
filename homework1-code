@@ -1,0 +1,22 @@
+# สร้าง adjacency matrix จากกราฟที่ให้มา
+# สมมติให้ node: A = 0, B = 1, C = 2, D = 3, E = 4, F = 5
+
+adj_matrix = [
+    #A   B    C    D    E    F
+    [  0, 523,   0,   0,   0,   0],  # A
+    [  0,   0, 200, 548,   0,   0],  # B
+    [345,   0,   0, 360,   0,   0],  # C
+    [  0,   0,   0,   0,   0, 320],  # D
+    [  0,   0, 467, 245,   0, 555],  # E
+    [  0,   0,   0,   0,   0,   0]   # F
+]
+
+# ฟังก์ชั่นแสดง adjacency matrix แบบสวยๆ
+def print_matrix(matrix):
+    nodes = ['A', 'B', 'C', 'D', 'E', 'F']
+    print("    " + "  ".join(nodes))
+    for i, row in enumerate(matrix):
+        print(f"{nodes[i]}  " + "  ".join(f"{val:3}" for val in row))
+
+# แสดงผล
+print_matrix(adj_matrix)
